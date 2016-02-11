@@ -6,30 +6,26 @@ Instruction to start:
 
 1) mvn clean install
 
+2) Download Hazelcast distributive from: http://hazelcast.org/download/.
 
-2) Download Hazelcast distributive from: http://hazelcast.org/download/ to <HAZELCAST_DISTRIBUTIVE> directory
+3) Start Hadoop file system
 
+4)  Step to hazelcast-yarn.jar directory location.
 
-3) Copy target/hazelcast-yarn.jar into <HAZELCAST_DISTIBUTIVE>/bin
-
-
-4) Start Hadoop file system
-
-
-5) Run: >> hadoop jar hazelcast-yarn.jar <Path to hazelcast-yarn.jar> <Path to Hazelcast ZIP fix> hazelcast-yarn.properties
+Run: >> hadoop jar hazelcast-yarn.jar &lt;Path to hazelcast-yarn.jar> &lt;Path to Hazelcast ZIP-file> &lt;Hazelcast-Yarn property file>
 
 
 Property file structure:
 
 
-JVM_OPTS=<Options of JVM>
+JVM_OPTS=&lt;Options of JVM >
 
-CLUSTER_SIZE=<Size of the cluster>
+CLUSTER_SIZE=&lt;Size of the cluster >
 
-CPU_PER_NODE=<Number of cpu core being used by Hazelcast node>
+CPU_PER_NODE=&lt;Number of cpu core being used by Hazelcast node>
 
-MEMORY_PER_NODE=<Number of memory core being used by Hazelcast node>
+MEMORY_PER_NODE=&lt;Number of memory core being used by Hazelcast node>
 
-HAZELCAST_WORK_DIR=<Path to the Hazelcast work dir on HDFS>
+HAZELCAST_WORK_DIR=&lt;Path to the Hazelcast work dir on HDFS>
 
-HAZELCAST_CUSTOM_LIBS=<Path to custom libs>
+HAZELCAST_CUSTOM_LIBS=&lt;Path to custom libs>
